@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Корзина</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/cart">Корзина</a>
+        </nav>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h2>Ваша корзина:</h2>
+        <ul class="cart-list">
+            {% for item in cart %}
+                <li class="cart-item">
+                    <span>{{ item.name }} - {{ item.price }} руб. (Количество: {{ item.quantity }})</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <p class="total">Общая сумма: {{ total }} руб.</p>
+        <a href="{{ url_for('checkout') }}" class="checkout-btn">Оформить заказ</a>
+    </main>
+    <footer>
+        <p>&copy; GitHub/Balivan-src</p>
+    </footer>
+</body>
+</html>

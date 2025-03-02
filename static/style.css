@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+}
+
+header {
+    background-color: #4b0082; /* Фиолетовый фон */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-list, .cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-item, .cart-item {
+    background-color: #2a2a2a; /* Темный фон для элементов */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444; /* Темная граница */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.add-to-cart-btn, .checkout-btn, .home-btn {
+    padding: 10px 20px;
+    background-color: #6a0dad; /* Фиолетовый цвет кнопок */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover, .checkout-btn:hover, .home-btn:hover {
+    background-color: #5a0b9a; /* Темный фиолетовый при наведении */
+}
+
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.flash {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.flash.success {
+    background-color: #4b0082; /* Фиолетовый фон для успешных сообщений */
+    color: #fff;
+}
+
+.flash.danger {
+    background-color: #8b0000; /* Темно-красный фон для ошибок */
+    color: #fff;
+}
+
+footer {
+    background-color: #4b0082; /* Фиолетовый фон */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
